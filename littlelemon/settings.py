@@ -139,3 +139,5 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
     ],
 }
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
