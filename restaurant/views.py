@@ -7,6 +7,10 @@ from .models import Menu
 from .serializers import MenuItemSerializer
 from .models import Booking
 from .serializers import BookingSerializer
+from rest_framework.authentication import TokenAuthentication
+
+
+
 
 from .serializers import UserSerializer
 
@@ -33,3 +37,4 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+    permission_classes = [IsAuthenticated]
